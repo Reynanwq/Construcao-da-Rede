@@ -1,0 +1,29 @@
+O termo "ESP" frequentemente se refere aos chips e módulos de comunicação sem fio produzidos pela empresa Espressif Systems. Eles são conhecidos por seus chips Wi-Fi e Bluetooth de baixo custo e alto desempenho, amplamente utilizados no desenvolvimento de dispositivos IoT (Internet of Things).
+
+Conexão entre dois nós ESP:
+
+    Utilize a biblioteca ESP8266WiFi.h para configurar a conexão Wi-Fi em cada nó ESP.
+    Estabeleça uma comunicação ponto a ponto (P2P) entre os dois nós, geralmente por meio de sockets ou protocolos de comunicação serial, dependendo da aplicação.
+    Implemente um protocolo para transmitir dados entre os nós ESP, seja utilizando uma estrutura específica para os dados ou um formato serializado.
+
+
+    // Código para um nó ESP
+#include <ESP8266WiFi.h>
+
+const char* ssid = "SuaRedeWiFi";
+const char* password = "SuaSenhaWiFi";
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.begin(ssid, password);
+  
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Connecting to WiFi...");
+  }
+  Serial.println("Connected to WiFi");
+}
+
+void loop() {
+  // Lógica de comunicação entre os nós ESP
+}

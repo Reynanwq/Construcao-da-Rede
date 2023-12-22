@@ -1,0 +1,59 @@
+O termo "RESP" se refere ao Redis Serialization Protocol. O Redis é um banco de dados em memória que utiliza um protocolo de comunicação simples para transmitir dados entre o cliente e o servidor. O RESP é um formato de protocolo binário que define como os comandos e respostas são serializados e desserializados no Redis.
+
+Conexão entre ESP e Raspberry Pi (Nó Coordenador):
+
+    No Raspberry Pi, utilize a biblioteca wiringPi para controlar os pinos GPIO, se necessário.
+    Configurar a comunicação Wi-Fi no Raspberry Pi com a biblioteca wiringPi ou outras bibliotecas específicas.
+    Estabeleça uma comunicação entre o ESP e o Raspberry Pi, seja por sockets, HTTP ou outra forma de comunicação que atenda às suas necessidades.
+
+    Uso do MQTT para transmitir dados do Nó Coordenador (Raspberry Pi):
+
+    Instale um broker MQTT no Raspberry Pi (por exemplo, o Mosquitto).
+    Utilize a biblioteca MQTT para C no Raspberry Pi e nos nós ESP.
+    No nó coordenador, publique os dados desejados no tópico MQTT correspondente.
+    Nos nós ESP, inscreva-se no mesmo tópico e receba os dados publicados pelo nó coordenador.
+
+
+    // Código para o nó coordenador (Raspberry Pi)
+#include <wiringPi.h>
+
+int main() {
+  // Configuração inicial
+  wiringPiSetup();
+  
+  // Lógica de comunicação entre ESP e Raspberry Pi
+  return 0;
+}
+
+
+
+o uso do MQTT:
+
+// Código para o nó coordenador (Raspberry Pi) utilizando Mosquitto MQTT
+#include <mosquitto.h>
+
+void on_message(struct mosquitto *mosq, void *userdata, const struct mosquitto_message *message) {
+  // Lógica para processar mensagens MQTT recebidas
+}
+
+int main() {
+  struct mosquitto *mosq = NULL;
+
+  mosquitto_lib_init();
+  mosq = mosquitto_new("NóCoordenador", true, NULL);
+
+  mosquitto_connect(mosq, "localhost", 1883, 60);
+
+  mosquitto_subscribe(mosq, NULL, "seu_topico", 0);
+
+  mosquitto_message_callback_set(mosq, on_message);
+
+  mosquitto_loop_start(mosq);
+
+  // Lógica adicional
+
+  mosquitto_destroy(mosq);
+  mosquitto_lib_cleanup();
+
+  return 0;
+}

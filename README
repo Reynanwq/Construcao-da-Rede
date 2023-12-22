@@ -1,11 +1,11 @@
 Tudo terá que ser produzido em C.
 
     • ESP
-    • RESP
+    • RASPBERRY
     • NÓ COORDENADOR
 
 Precisamos trabalhar de duas formas.
 
 Conecção entre dois nós ESP.
-Conecção entre ESP e o Nó Coordenador.
+Conecção entre ESP e o Nó Coordenador(que é um raspberry).
 Pegar os dadós do nó coordenador e encontrar uma forma de exibi-lo. Podemos/devemos utilizar MQTT para tratar a mensagem.
