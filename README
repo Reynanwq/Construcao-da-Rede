@@ -1,0 +1,11 @@
+Tudo terá que ser produzido em C.
+
+    • ESP
+    • RESP
+    • NÓ COORDENADOR
+
+Precisamos trabalhar de duas formas.
+
+Conecção entre dois nós ESP.
+Conecção entre ESP e o Nó Coordenador.
+Pegar os dadós do nó coordenador e encontrar uma forma de exibi-lo. Podemos/devemos utilizar MQTT para tratar a mensagem.
