@@ -1,3 +1,6 @@
+------------------------------------ // ------------------------------------ // ------------------------------------
+INFORMAÇÕES OBTIDAS ATÉ O MOMENTO. É NECESSÁRIO VERIFICAR A SUA RELEVANCIA E CORRETUDE.
+
 O termo "ESP" frequentemente se refere aos chips e módulos de comunicação sem fio produzidos pela empresa Espressif Systems. Eles são conhecidos por seus chips Wi-Fi e Bluetooth de baixo custo e alto desempenho, amplamente utilizados no desenvolvimento de dispositivos IoT (Internet of Things).
 
 Conexão entre dois nós ESP:
@@ -27,3 +30,40 @@ void setup() {
 void loop() {
   // Lógica de comunicação entre os nós ESP
 }
+
+
+------------------------------------ // ------------------------------------ // ------------------------------------
+DEFINIÇÃO DO ESP
+
+Possui WiFi e Bluetooth. É fabricado por uma empresa chinesa. É um filho do ESP8266(que nasceu em 2014). O ESP32 nasceu em 2016. O ESP32 é o chip que está soldado na placa, ou seja, ele faz parte de uma placa de desenvolvimento. Para programar o ESP32 precisamos do ESP-IDF SDK em c/c++.
+- ESP-IDF: SDK oficial para programar o ESP32, pode ser utilizado pelo VScode e eclipse.
+- ARDUINO IDE: adaptado ao ESP-IDF, mas não é possível fazer tuedo que o ESP32 permite.
+
+------------------------------------ // ------------------------------------ // ------------------------------------
+DEFINIÇÃO DO ESP32
+
+É uma placa wifi programavel, muito similar ao arduino. Segue a mesma linha do arduino. O ESP32 é a mais conhecida. É uma placa programavel. A diferença dela e o Arduino é que ela já vem com wifi.
+Funcionalidades:
+- wifi e Bluetooth
+- Pinagens de I/O: conseguimos ler mensagens de sinais.
+- Entradas Analógicas
+- Programavél em C++.
+- Hospedar páginas web.
+- Se integra com a IDE do arduino.
+
+------------------------------------ // ------------------------------------ // ------------------------------------
+DEFINIÇÃO DO ESP32, ESP8266, ARDUINO, RASPBERRY
+
+Arduino consegue trabalhar com 5W e é o mais simples de utilizar, mas não tem wifi integrado.
+
+ESP32 e RASPBERRY tem Bluetooth. ESP32 realiza calculos mais avançados. 
+
+------------------------------------ // ------------------------------------ // ------------------------------------
+SIMULADOR ESP32
+
+É O WOKWI: https://wokwi.com/
+           https://wokwi.com/esp32
+           https://wokwi.com/projects/new/esp32
+Não precisa instalar nada no PC, toda aplicação é feita pelo browser.
+
+
