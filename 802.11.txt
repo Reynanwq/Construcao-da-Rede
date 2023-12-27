@@ -1,0 +1,25 @@
+O Padrão 802.11 estabelece normas para a criação e para o uso de redes sem fio. A transmissão deste tipo de rede é feita por sinais de radiofrequência, que se propagam pelo ar e podem cobrir áreas na casa das centenas de metros.
+
+A primeira versão foi lançada em 1997.
+
+802.11b: é a atualização da primeira versão que foi lançada.
+
+802.11a: foi disponibilizado no final do ano de 1999. Sua principal aracteristica é a possibilidade de operar com taxas de transmissão de dados nos seguintes valores: 6 Mb/s, 9 Mb/s, 12 Mb/s, 18 Mb/s, 24 Mb/s, 36 Mb/s,48 Mb/s, 54 Mb/s. Com um alcance geografico de cerca de 50 metros.
+
+802.11g: 2003, sucessor natural do 802.11b, pode trabalhar com taxa de transmissão de até 54 Mb/s.
+
+802.11n:A principal caracteristica é o uso do esquema chamado Multiple-Input Multiple-Output (MIMO), capaz de aumentar consideravelmente as taxas de transferencia de dados.
+
+802.11ac: Ele é o sucessor do 802.11n. Sua principal vantagem é a velocidade, estimada em até 433 Mb/s 6Gb/s.
+
+Pode ser utilizado da camada de enlace para baixo. 
+
+Os dispositivos se conectam à um Acess Point (AP).
+
+Comunicação ESP com sockets: 
+
+ESP-NOW (IPE) está em conformidade com o padrão 802.11n do WiFi.
+
+definição ESP-NOW (IPE): É um protocolo de comunicação sem fio desenvolvido pela Espressif Systems para a sua linha de chips ESPx. Ela permite que os dispositivos ESP se comunicaquem diretamente sem se conectar a uma rede WIFI. Ele usa uma tecnologia semelhante aos do teclado e mouse sem fio.
+
+definição do 802.11n: Tem uma classe de dados chamada Quadro de Ação de Gestão (MAF). Ele permite que os pacotes curtos de dados sejam passados entre chips ESP, independente do estado de conexão da rede WiFi.
