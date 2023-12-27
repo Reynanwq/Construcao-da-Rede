@@ -1,0 +1,20 @@
+website: https://mqtt.org/
+
+Utilizado em aplicações IOT. Uma série de dispositivos trocando informações muito rápidas. 
+
+BROKEN: temos equipamentos que vão publicar informações neste broker, e equipamentos que vão receber informações deste broker.
+
+quem tá publicando = publisher(sensorf)
+quem tá recebendo as informações publicadas é o = subscriber
+
+o subscriber tem que tá inscrito no tópico dseterminado.
+
+podemos instalar o broker no raspberry pi.
+- MOSQUITO: 
+- HIVEMQ: 
+
+Aparentemente, o MQTT atua quando temos que realizar uma comunicação entre dispositivos(talvez ele seja o "NÓ COORDENADOR" que o professor falou).
+
+MQTT é um protocolo com o objetivo de realizar a trocar de informações entre dispositivos. 
+
+Cada equipamento precisa ter um ID especifico.
