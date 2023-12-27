@@ -1,3 +1,6 @@
+------------------------------------ // ------------------------------------ // ------------------------------------
+INFORMAÇÕES GERAIS:
+
 O termo "RESP" se refere ao Redis Serialization Protocol. O Redis é um banco de dados em memória que utiliza um protocolo de comunicação simples para transmitir dados entre o cliente e o servidor. O RESP é um formato de protocolo binário que define como os comandos e respostas são serializados e desserializados no Redis.
 
 Conexão entre ESP e Raspberry Pi (Nó Coordenador):
@@ -57,3 +60,25 @@ int main() {
 
   return 0;
 }
+
+------------------------------------ // ------------------------------------ // ------------------------------------
+O QUE É UM RASPBERRY: o nome vem de franboesa + python
+NO começo, rodava apenas o python, mas agora rodar muito mais.
+
+B -> 35 dolares
+A -> 25 dolares
+ZERO -> surgiu em 2015
+ZEROw -> versão ZERO com wifi e bluetooth
+
+É um minicomputador extremamente pequeno, possui todos s periféricos de um computador normal.
+- entrada USB
+- entrada Ethernet
+- wifi
+- bluetooth
+- Display
+- P2
+- HDMI
+
+Através do MQTT conseguimos conectar 80 ESP32 ao RASPBERRY PI.
+
+Pode ser programada em Python, c++, Nodejs.
