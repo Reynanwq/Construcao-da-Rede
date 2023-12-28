@@ -67,3 +67,4 @@ SIMULADOR ESP32
 Não precisa instalar nada no PC, toda aplicação é feita pelo browser.
 
 
+A ideia básica é configurar um dispositivo como ponto de acesso (AP) e os outros como clientes (STA) para se conectarem ao ponto de acesso. Em seguida, os dispositivos podem se comunicar diretamente uns com os outros.

@@ -23,3 +23,9 @@ ESP-NOW (IPE) está em conformidade com o padrão 802.11n do WiFi.
 definição ESP-NOW (IPE): É um protocolo de comunicação sem fio desenvolvido pela Espressif Systems para a sua linha de chips ESPx. Ela permite que os dispositivos ESP se comunicaquem diretamente sem se conectar a uma rede WIFI. Ele usa uma tecnologia semelhante aos do teclado e mouse sem fio.
 
 definição do 802.11n: Tem uma classe de dados chamada Quadro de Ação de Gestão (MAF). Ele permite que os pacotes curtos de dados sejam passados entre chips ESP, independente do estado de conexão da rede WiFi.
+
+ESP-NOW: Não precisa de WiFi, é melhor que o TCP/IP. Ele é peer-to-peer. Broadcast: ao apertar o botão, ele envia para todo mundo. É instantanea.
+
+1. Master faz a leitura dos pinos.
+2. Broadcast dos valores lidos.
+3. Slaves alteram a saída dos seus pinos para ficar igual aos valores recebidos do Master.
