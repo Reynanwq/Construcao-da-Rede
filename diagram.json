@@ -1,0 +1,16 @@
+{
+    "version": 1,
+    "author": "Reynan Paiva",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -48, "left": -350.36, "attrs": {} },
+      { "type": "board-esp32-devkit-c-v4", "id": "esp1", "top": -96, "left": -206.36, "attrs": {} }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "esp1:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp1:RX", "$serialMonitor:TX", "", [] ]
+    ],
+    "dependencies": {}
+  }
