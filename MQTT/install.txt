@@ -1,0 +1,40 @@
+- sudo apt-get upgrade && sudo apt-get upgrade //atualizar o sistema
+- sudo apt install net-tools //precisa instalar para depois utilizar o "ifconfig"
+- ifconfig //encontrar o IP da raspberry que o roteador atribuiu para ela, queremos deixar o IP como fixo.
+- netstat -nr //conseguimos descobrir quem que atribuiu o IP (no caso, apenas caso queira confirmar que foi o roteador)
+- sudo nano /etc/dhcpcd.conf //alterações necessárias para a configuração da raspberrypi
+
+escrever no nano:
+- interface {interface de rede que vc vai usar}
+- static ip_address={seu futuro ip fox}/{máscara de rede}
+- static routers={ip do seu roteador}
+- static domain_name_servers={ip do seu roteador} 8.8.8.8 8.8.4.4
+
+- sudo apt-get upgrade && sudo apt-get upgrade //atualizar o sistema
+- sudo apt-get install mosquitto -y //instalar o broker
+- sudo apt-get install mosquitto-clients -y //instalar o client
+- sudo nano /etc/mosquitto/mosquitto.conf //realizar algumas configurações
+
+escrever no nano do mosquitto:
+- allow_anonnymous false //não vamos permitir que alguém publique ou se inscreva de forma anonima.
+- password_file /etc/mosquitto/pwfile //qual é o arquqivo que irá conter as senhas do meu broker
+- listener 1883 //porta que vamos usar para comunicação
+
+criar o arquivo de usuario/senhas:
+- sudo mosquitto_passwd -c /etc/mosquitto/pwfile reynan
+- cat /etc/mosquitto/pwfile //ver o conteudo do arquivo
+- sudo reboot // para reiniciar
+
+Praticando: 
+- mosquitto -v //testando em um tópico
+- mosquitto_sub -d -t testTopic //sobe um tópico e fica observando
+- mosquitto_pub -d -t testTopic -m "Hello World!" //envia o "hello world" e desconecta
+
+
+Instalando um ambiente mqtt:
+- curl -LO https://www.emqx.com/en/downloads/MQTTX/v1.9.8/mqttx-cli-linux-x64
+- sudo install ./mqttx-cli-linux-x64 /usr/local/bin/mqttx
+
+
+Referência:
+https://www.youtube.com/watch?v=gQhSyAmnGgY
