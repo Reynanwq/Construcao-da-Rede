@@ -3,6 +3,7 @@
 const char* ssid = "Reynan";
 const char* password = "reynan987";
 
+//criando obj que irá gerenciar conexoes
 WiFiServer server(80);
  
 void setup() {
@@ -23,22 +24,24 @@ void setup() {
   Serial.println("Endereço de IP: ");
   Serial.println(WiFi.localIP());
  
+  //inicia servidor
   server.begin();
 }
  
 void loop() {
+  //aguarda conexoes de clientes
     WiFiClient client = server.available();
     if (client) {
     Serial.println("Novo cliente conectado");
-    // Aguarde até que o cliente envie dados
+    // Aguarda até que o cliente envie dados
     while (client.connected()) {
       if (client.available()) {
-        // Leia os dados do cliente
+        // ler os dados do cliente
         String message = client.readStringUntil('\r');
         Serial.print("Mensagem recebida: ");
         Serial.println(message);
 
-        // Enviar uma resposta de volta ao cliente (opcional)
+        // Enviar uma resposta de volta ao cliente 
         client.println("Mensagem recebida com sucesso!");
 
         // Feche a conexão
