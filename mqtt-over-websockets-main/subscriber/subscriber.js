@@ -10,7 +10,7 @@
 
     const unsubscribeBtn = document.querySelector("#unsubscribe");
     unsubscribeBtn.addEventListener("click", function () {
-      unsubscribeToTopic();
+      unsubscribeToTopic();   
     });
   });
 
